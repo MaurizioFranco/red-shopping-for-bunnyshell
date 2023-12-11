@@ -1,16 +1,27 @@
 package com.bunnyshell.templates.springbootrestapi.controller;
 
-import com.bunnyshell.templates.springbootrestapi.exception.ResourceNotFoundException;
-import com.bunnyshell.templates.springbootrestapi.model.Book;
-import com.bunnyshell.templates.springbootrestapi.repository.BookRepository;
+import java.time.Instant;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
-import java.util.List;
+import com.bunnyshell.templates.springbootrestapi.exception.ResourceNotFoundException;
+import com.bunnyshell.templates.springbootrestapi.model.Book;
+import com.bunnyshell.templates.springbootrestapi.repository.BookRepository;
 
 @RestController
 @RequestMapping("/")
@@ -27,6 +38,13 @@ public class BookController {
     @GetMapping("/available")
     public List<Book> getAvailableBooks() {
         return bookRepository.findByAvailable(true);
+    }
+    
+    @GetMapping("/deleted")
+    public List<Book> getDeletedBooks() {
+    	List<Book> deleted = new ArrayList () ;
+    	deleted.add(new Book ("book_title", "book_description", false, Date.from(Instant.now()), Date.from(Instant.now())));
+        return deleted ;
     }
 
     @GetMapping("/books/{id}")

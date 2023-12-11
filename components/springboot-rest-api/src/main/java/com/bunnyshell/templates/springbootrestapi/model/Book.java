@@ -37,8 +37,18 @@ public class Book {
     @Column(name = "updated_at", nullable = false)
     private Date updatedAt;
 
+    
 
-    public long getId() {
+    public Book(@NotBlank String title, String description, boolean available, Date createdAt, Date updatedAt) {
+		super();
+		this.title = title;
+		this.description = description;
+		this.available = available;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+	}
+
+	public long getId() {
         return id;
     }
 

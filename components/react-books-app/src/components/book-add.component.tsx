@@ -25,7 +25,7 @@ export default class BookAdd extends Component<Props, State> {
 
     this.state = {
       id: null,
-      title: "",
+      title: "aaa",
       description: "",
       available: false,
       submitted: false
