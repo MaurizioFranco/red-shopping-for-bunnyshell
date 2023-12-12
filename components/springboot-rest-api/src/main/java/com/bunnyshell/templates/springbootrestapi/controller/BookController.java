@@ -40,7 +40,7 @@ public class BookController {
         return bookRepository.findByAvailable(true);
     }
     
-    @GetMapping("/deleted")
+    @GetMapping("/books/deleted")
     public List<Book> getDeletedBooks() {
     	List<Book> deleted = new ArrayList () ;
     	deleted.add(new Book ("book_title", "book_description", false, Date.from(Instant.now()), Date.from(Instant.now())));
