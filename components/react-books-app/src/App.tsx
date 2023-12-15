@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import BookAdd from "./components/book-add.component";
 import Book from "./components/book.component";
 import BookList from "./components/book-list.component";
+import ProductList from "./components/product-list.component";
 import logo from '../src/assets/logo.png'
 
 class App extends Component {
@@ -46,6 +47,22 @@ class App extends Component {
                       Add Book
                     </Link>
                   </li>
+                  <li className="nav-item">
+                    <Link to={"/product/add"} className="nav-link">
+                      Aggiungi prodotto
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to={"/price/add"} className="nav-link">
+                      Aggiungi prezzo
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to={"/products"} className="nav-link">
+                      Prodotti e Prezzi
+                    </Link>
+                  </li>
+                  
                 </div>
             </div>
           </div>
@@ -56,6 +73,8 @@ class App extends Component {
             <Route exact path={["/", "/books"]} component={BookList} />
             <Route exact path="/books/add" component={BookAdd} />
             <Route path="/books/:id" component={Book} />
+            <Route exact path={["/products"]} component={ProductList} />
+            {/* <Route exact path="/products/add" component={ProductAdd} /> */}
           </Switch>
         </div>
       </div>
