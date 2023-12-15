@@ -1,4 +1,4 @@
-package com.bunnyshell.templates.springbootrestapi.controller;
+package com.price.low.controller;
 
 import java.time.Instant;
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.bunnyshell.templates.springbootrestapi.exception.ResourceNotFoundException;
-import com.bunnyshell.templates.springbootrestapi.model.Book;
-import com.bunnyshell.templates.springbootrestapi.repository.BookRepository;
+import com.price.low.exception.ResourceNotFoundException;
+import com.price.low.repository.BookRepository;
+import com.price.low.request.model.Book;
 
 @RestController
 @RequestMapping("/")

@@ -1,8 +1,9 @@
-package com.bunnyshell.templates.springbootrestapi.repository;
+package com.price.low.repository;
 
-import com.bunnyshell.templates.springbootrestapi.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import com.price.low.request.model.Book;
 
 import java.util.List;
 

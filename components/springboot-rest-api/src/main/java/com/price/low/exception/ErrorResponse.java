@@ -1,4 +1,4 @@
-package com.bunnyshell.templates.springbootrestapi.exception;
+package com.price.low.exception;
 
 import java.util.Date;
 

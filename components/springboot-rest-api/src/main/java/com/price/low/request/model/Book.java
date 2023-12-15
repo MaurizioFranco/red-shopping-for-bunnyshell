@@ -1,4 +1,4 @@
-package com.bunnyshell.templates.springbootrestapi.model;
+package com.price.low.request.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -37,7 +37,9 @@ public class Book {
     @Column(name = "updated_at", nullable = false)
     private Date updatedAt;
 
-    
+    public Book() {
+		super();
+	}
 
     public Book(@NotBlank String title, String description, boolean available, Date createdAt, Date updatedAt) {
 		super();

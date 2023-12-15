@@ -1,4 +1,4 @@
-package com.bunnyshell.templates.springbootrestapi.exception;
+package com.price.low.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
