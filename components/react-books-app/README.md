@@ -1,3 +1,9 @@
+##COMMANDS TO EXECUTE BEFORE START DEVELOPMENT
+#MAP IMAGES FOLDER INTO FRONTEND
+LINUX: 
+example: ln -s </target-directory/target-file> </symlink-directory/example-symlink>
+ln -s /home/maurizio/lowprice/images /home/maurizio/git/red-shopping-for-bunnyshell/components/react-books-app/public/images
+
 # React Typescript example Project with Axios and Web API
 
 This app is a CRUD example, made with React Typescript and Axios to consume Web API with Router & Bootstrap 4.

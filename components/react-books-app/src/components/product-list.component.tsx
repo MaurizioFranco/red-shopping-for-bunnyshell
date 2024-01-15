@@ -386,7 +386,8 @@ export default class ProductList extends Component<Props, State>{
             </div>
           </div>
         </div>
-        <div className="col-md-12">
+        <div className="row">
+          <div className="col-sm-12">
           <ul className="list-group">
             {filteredProductsForList.length > 0 ?
               filteredProductsForList.map((item: IProductData, index: number) => (
@@ -403,30 +404,30 @@ export default class ProductList extends Component<Props, State>{
                         <img
                           src={"./images/products/" + item.image_file_name}
                           alt={item.product_name}
-                          width="50"
-                          height="50"
+                          width="100"
+                          height="100"
                         />
                   </div>
                   <div>
                         <img
                           src={"./images/brand/" + item.logo_image_file_name}
                           alt={item.brand_name}
-                          width="30"
-                          height="30"
+                          width="70"
+                          height="70"
                         />
                   </div>
                   <div>{item.product_name}</div>
                   <div>{item.product_description}</div>
                   <div>{item.unit_of_measure_label}. {item.measure} - € {item.list_prize}</div>
                   <div>{item.unit_of_measure===2?("€"+(item.list_prize*1000/item.measure).toFixed(2)+"/kg"):""}</div>
-                  <div className="right">
+                  {/* <div className="right">
                     <Link
                     to={"/books/" + item.id}
                     className="badge badge-warning"
                   >
                     Edit
                   </Link>
-                  </div>
+                  </div> */}
 
                 </li>
               )) : 
@@ -445,6 +446,7 @@ export default class ProductList extends Component<Props, State>{
                 Remove All Products
               </button>}
           </div> */}
+        </div>
         </div>
       </div>
     );
